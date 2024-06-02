@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007AFF;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header .navbar{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 0vw;
+}
+
+header ul li{
+    background-color: #ffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+    color: #ff3737;
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item active{
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#homePage > div{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+
+
+
