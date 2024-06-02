@@ -159,14 +159,14 @@ form div input,select{
 
 }
 
-#CustomerMange th, #CustomerMange td{
+#CustomerManage th, #CustomerMange td{
     border: 1px solid #bababa;
     width: 20vw;
     height: 4vw;
     text-align: center;
 }
 
-#CustomerMange th {
+#CustomerManage th {
     background-color:#f44f4f;
     color: white;
 }
