@@ -96,6 +96,79 @@ header ul li{
     padding: 0;
 }
 
+section > div{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    font-size: 18px;
+    padding: 1vw;
+}
+
+section > :first-child > div{
+    margin-top: 12vh;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 34px;
+}
+
+form div input,select{
+    padding: 10px;
+    border: 1px solid #bababa;
+    border-radius: 10px;
+}
+
+.button{
+    flex-direction: row;
+    font-size: 18px !important;
+    gap: 0;
+}
+
+.button button{
+    padding: 19px 28px;
+    border: 1px solid #bababa;
+    cursor: pointer;
+
+}
+
+.button > :first-child {
+    background-color: #56ABF7;
+}
+
+.button > :nth-child(2){
+    background-color:#f62a2a;
+}
+
+.button > :nth-child(3){
+    background-color:#d2e410;
+}
+
+.button > :nth-child(4){
+    background-color:#1ab409;
+}
+
+.button > :last-child{
+    background-color: #ff3737;
+
+}
+
+#CustomerMange th, #CustomerMange td{
+    border: 1px solid #bababa;
+    width: 20vw;
+    height: 4vw;
+    text-align: center;
+}
+
+#CustomerMange th {
+    background-color:#f44f4f;
+}
 
 
 
