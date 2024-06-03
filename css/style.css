@@ -175,6 +175,23 @@ form div input,select{
     color: white;
 }
 
+.tableRow{
+    height: auto;
+}
+
+.table > div {
+    display: flex;
+}
+
+.table > div > div {
+    width: 18vw;
+    height: 4vw;
+    border: 1px solid #bababa;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
 
 
 
