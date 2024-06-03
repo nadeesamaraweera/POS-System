@@ -116,4 +116,12 @@ function validate(customer){
         );
     }
 
+    function matchNumber(id){
+        var match = id.match(/CO(\d+)/);
+        if(match && match.length > 1){
+            return parseInt([1]);
+        }
+        return null;
+    }
+
     
