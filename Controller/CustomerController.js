@@ -105,4 +105,15 @@ function validate(customer){
 
     }
 
+    function loadTable (customer){
+        $('#CustomerManage .tableRow').append(
+            '<tr> ' +
+                '<td>' + customer.customerId + '</td>' +
+                '<td>' + customer.customerName + '</td>' +
+                '<td>' + customer.customerAddress + '</td>' +
+                '<td>' + customer.customerSalary + '</td>' +
+            '</tr>' 
+        );
+    }
+
     
