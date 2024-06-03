@@ -1,13 +1,13 @@
 export let Customers = [
     {
-        custId : 'C01',
+        custId : 'C001',
         custName : 'Nadeesha',
         custAddress : 'Matara',
         custSalary : '25000'
     } ,
 
     {
-        custId : 'C02',
+        custId : 'C002',
         custName : 'Madushan',
         custAddress : 'Matara',
         custSalary : '30000'
@@ -16,13 +16,13 @@ export let Customers = [
 
 export let Items = [
     {
-        itemId : 'I01',
+        itemId : 'I001',
         itemName : 'Soap',
         itemQty : 10,
         itemPrice : 100
     },
     {
-        itemId : 'I02',
+        itemId : 'I002',
         itemName : 'Book',
         itemQty : 10,
         itemPrice : 200

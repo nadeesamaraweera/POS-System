@@ -12,15 +12,19 @@ $(document).ready(function(){
         switch(targetsection){
             case '#CustomerManage' :
                 $('.navbar').text('Customer Manage');
+                document.title = "Customer Manage";
                 break;
             case '#ItemManage' :
                 $('.navbar').text('Item Manage');
+                document.title = "Item Manage";
                 break;
             case '#OrderManage' :
                 $('.navbar').text('Order Manage');
+                document.title = "Order Manage";
                 break;
             default:
                 $('.navbar').text('Home Page');
+                document.title = "Home Page";
         }
     })
 });

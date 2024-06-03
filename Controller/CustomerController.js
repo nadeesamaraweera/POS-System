@@ -34,6 +34,7 @@ $('#CustomerManage .saveBtn').click(function(){
 
     if(validResult){
         saveCustomer(customer);
+        alert('Customer Saved');
         refresh();
     }
 
@@ -44,7 +45,7 @@ function validate(customer){
 
     let valid = true;
 
-    if((/^C0[0-9]+$/).test(customer.custId)){
+    if((/^C00[0-9]+$/).test(customer.custId)){
         $('#CustomerManage .invalidCustId').text('');
         valid = true;
     }
@@ -111,7 +112,6 @@ function loadTable(customer){
             '<td>' + customer.custSalary + '</td>' +
         '</tr>' 
     );
-    
 }
 
 function extractNumber(id) {
@@ -126,14 +126,14 @@ function createCustomerId() {
     let customers = getAllCustomers();
     
     if (!customers || customers.length === 0) {
-        return 'C01';
+        return 'C001';
     } else {
         let lastCustomer = customers[customers.length - 1];
         let id = lastCustomer && lastCustomer.custId ? lastCustomer.custId : 'C00';
         
         let number = extractNumber(id);
         number++;
-        return 'C0' + number;
+        return 'C00' + number;
     }
 }
 
@@ -174,7 +174,7 @@ function searchCustomer(id){
 $('#CustomerManage .updateBtn').click(function(){
     
     let UpdateCustomer = {
-        custId : 'C00',
+        custId : 'C000',
         custName : $('#CustomerManage .custName').val(),
         custAddress : $('#CustomerManage .custAddress').val(),
         custSalary : $('#CustomerManage .custSalary').val()
@@ -229,4 +229,3 @@ $('#CustomerManage .tableRow').on('click', 'tr', function(){
     $('#CustomerManage .custSalary').val(price);
 });
 
-    

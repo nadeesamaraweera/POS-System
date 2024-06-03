@@ -34,14 +34,14 @@ header ul{
 
 header ul li{
     background-color: #ffff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
     border: 1px solid #c4c4c4;
 }
 
-header ul li {
+header ul li a{
     color: #ff3737;
 }
 
@@ -59,6 +59,7 @@ section > :first-child > div{
 .topic{
     font-size: 2rem;
     font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
 }
 
 form div{
@@ -67,12 +68,7 @@ form div{
     gap: 5px;
     margin-top: 34px;
 }
-/* 
-#CustomerManage form div input , #CustomerManage select , #ItemManage form div input , #ItemManage select{
-    padding: 10px;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-} */
+
 
 form div input ,select{
     padding: 10px;
@@ -116,34 +112,39 @@ form div input ,select{
     margin-left: 50px;
 }
 
-#CustomerManage th , #CustomerManage td {
+#CustomerManage th , #CustomerManage td , #ItemManage th , #ItemManage td{
     border: 1px solid #c4c4c4;
     width: 20vw;
     height: 4vw;
     text-align: center;
 }
 
-#CustomerManage th{
+#CustomerManage th , #ItemManage th{
     background-color: #DB3843;
     color: white;
 }
+
+section{
+    display: none;
+}
+
 
 
 .tableRow{
    height: auto;
 }
 
-.table > div {
+.table > div , .tableRows > div{
     display: flex;
 }
 
-.table{
+.table , .tableRows{
     display: flex;
     flex-direction: column;
     padding: 0 5.7vw;
 }
 
-.table > div > div {
+.table > div > div , .tableRows > div > div{
     width: 18vw;
     height: 4vw;
     border: 1px solid #c4c4c4;
@@ -151,6 +152,10 @@ form div input ,select{
     justify-content: center;
     align-items: center;
 }
+.tableRows > div > div{
+    width: 20vw;
+}
+
 
 
 h5{
@@ -158,8 +163,8 @@ h5{
     color: #ff4343;
     font-weight: 400;
     position: absolute;
-    margin-top: 8.8vh;
-}  
+    margin-top: 9.4vh;
+}
 
 
 .carousel {
@@ -222,3 +227,6 @@ h5{
     padding: 0;
 }
 
+table{
+    border-collapse: collapse;
+}
