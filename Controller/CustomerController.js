@@ -93,5 +93,16 @@ function validate(customer){
         validData =false;
     }
 
+    let customers = getAllCustomer();
+    for(let i =0; i<customers.length; i++){
+        if(customers[i].customerId === customer.customerId){
+            $('#CustomerManage .invalidCustomerId').text('Customer Id Already Exists');
+            validData = false;
+        }
+    }
+     
+    return validData;
+
+    }
+
     
-}
