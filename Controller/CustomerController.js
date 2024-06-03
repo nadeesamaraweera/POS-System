@@ -1,127 +1,116 @@
-import {saveCustomer} from '../model/CustomerModel.js'
-import {getAllCustomer} from '../model/CustomerModel.js'
-import {updateCustomer} from '../model/CustomerModel.js'
-import {deleteCustomer} from  '../model/CustomerModel.js'
-
+import { saveCustomer } from '../model/CustomerModel.js';
+import { getAllCustomers } from '../model/CustomerModel.js';
+import { updateCustomer } from '../model/CustomerModel.js';
+import { deleteCustomer } from '../model/CustomerModel.js';
 
 $(document).ready(function(){
     refresh();
 });
 
-document.querySelector('#CustomerManage #CustomerForm').addEventListener('submit' , function(event){
+document.querySelector('#CustomerManage #customerForm').addEventListener('submit', function(event){
     event.preventDefault();
-
 });
 
-var customerId ;
-var customerName;
-var customerAddress;
-var customerSalary;
+var custId ;
+var custName;
+var custAddress;
+var custSalary;
 
-$('#CustomerManage .save').click(function(){
-    customerId = $('#CustomerManage .customerId').val();
-    customerName = $('#CustomerManage .customerName').val();
-    customerAddress = $('#CustomerManage .customerAddress').val();
-    customerSalary = $('#CustomerManage .customerSalary').val();
+$('#CustomerManage .saveBtn').click(function(){
+
+    custId = $('#CustomerManage .custId').val();
+    custName = $('#CustomerManage .custName').val();
+    custAddress = $('#CustomerManage .custAddress').val();
+    custSalary = $('#CustomerManage .custSalary').val();
 
     let customer = {
-       customerId : customerId,
-       customerName : customerName,
-       customerAddress : customerAddress,
-       customerSalary : customerSalary
-
+        custId : custId,
+        custName : custName,
+        custAddress : custAddress,
+        custSalary : custSalary
     }
 
-    let validateResult = validate(customer);
+    let validResult = validate(customer);
 
-    if(validateResult){
+    if(validResult){
         saveCustomer(customer);
         refresh();
     }
 
 });
 
+
 function validate(customer){
 
-    let validData = true;
+    let valid = true;
 
-    if((/^C0[0-9]+$/).test(customer.customerId)){
-        $('#CustomerManage .invalidCustomerId').text('');
-        validData =true;
-    }else{
-        $('#CustomerManage .invalidCustomerId').text('Invalid Customer Id');
-        validData =false;
+    if((/^C0[0-9]+$/).test(customer.custId)){
+        $('#CustomerManage .invalidCustId').text('');
+        valid = true;
+    }
+    else{
+        $('#CustomerManage .invalidCustId').text('Invalid Customer Id');
+        valid = false;
     }
 
-
-    if((/^(?:[A-Z][a-z]*)(?: [A-Z][a-z]*)*$/).test(customer.customerName)){
-        $('#CustomerManage .invalidCustomerName').text('');
-
-        if(validData){
-            validData = true;
+    if((/^(?:[A-Z][a-z]*)(?: [A-Z][a-z]*)*$/).test(customer.custName)){
+        $('#CustomerManage .invalidCustName').text('');
+        
+        if(valid){
+            valid = true;
         }
-
-    }else{
-        $('#CustomerManage .invalidCustomerName').text('Invalid Customer Name');
-        validData =false;
     }
 
+    else{
+        $('#CustomerManage .invalidCustName').text('Invalid Customer Name');
+        valid = false;
+    }
+
+    if((/^[A-Z][a-z, ]+$/).test(customer.custAddress)){
+        $('#CustomerManage .invalidCustAddress').text('');
+        
+        if(valid){
+            valid = true;
+        }
+    }
+
+    else{
+        $('#CustomerManage .invalidCustAddress').text('Invalid Customer Address');
+        valid = false;
+    }
+
+    if(customer.custSalary != null && customer.custSalary > 0){
+        $('#CustomerManage .invalidCustSalary').text('');
+        if(valid){
+            valid = true;
+        }
+    }
     
-
-    if((/^[A-Z][a-z, ]+$/).test(customer.customerAddress)){
-        $('#CustomerManage .invalidCustomerAddress').text('');
-
-        if(validData){
-            validData = true;
-        }
-
-    }else{
-        $('#CustomerManage .invalidCustomerAddress').text('Invalid Customer Address');
-        validData =false;
+    else{
+        $('#CustomerManage .invalidCustSalary').text('Invalid Customer Salary');
+        valid = false;
     }
 
-
-    if(customer.customerSalary !=null && customer.customerSalary > 0){
-        $('#CustomerManage .invalidCustomerSalary').text('');
-
-        if(validData){
-            validData = true;
-        }
-
-    }else{
-        $('#CustomerManage .invalidCustomerSalary').text('Invalid Customer Salary');
-        validData =false;
-    }
-
-    let customers = getAllCustomer();
-    for(let i =0; i<customers.length; i++){
-        if(customers[i].customerId === customer.customerId){
-            $('#CustomerManage .invalidCustomerId').text('Customer Id Already Exists');
-            validData = false;
+    let customers = getAllCustomers();
+    for(let i = 0; i < customers.length; i++){
+        if(customers[i].custId === customer.custId){
+            $('#CustomerManage .invalidCustId').text('Customer Id Already Exists');
+            valid = false;
         }
     }
-     
-    return validData;
 
-    }
+    return valid;
+}
 
-    function loadTable (customer){
-        $('#CustomerManage .tableRow').append(
-            '<tr> ' +
-                '<td>' + customer.customerId + '</td>' +
-                '<td>' + customer.customerName + '</td>' +
-                '<td>' + customer.customerAddress + '</td>' +
-                '<td>' + customer.customerSalary + '</td>' +
-            '</tr>' 
-        );
-    }
-
-    function matchNumber(id){
-        var match = id.match(/CO(\d+)/);
-        if(match && match.length > 1){
-            return parseInt([1]);
-        }
-        return null;
-    }
+function loadTable(customer){
+    $('#CustomerManage .tableRow').append(
+        '<tr> ' +
+            '<td>' + customer.custId + '</td>' +
+            '<td>' + customer.custName + '</td>' +
+            '<td>' + customer.custAddress + '</td>' +
+            '<td>' + customer.custSalary + '</td>' +
+        '</tr>' 
+    );
+}
 
     

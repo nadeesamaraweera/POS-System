@@ -1,10 +1,10 @@
-import { Customers } from "../db/DB.js";
+import { Customers } from '../db/DB.js';
 
-export function saveCustomer (customer){
+export function saveCustomer(customer) {
     Customers.push(customer);
 }
 
-export function getAllCustomer(){
+export function getAllCustomers() {
     return Customers;
 }
 
@@ -13,7 +13,7 @@ export function updateCustomer(index , customer){
 }
 
 export function deleteCustomer(index){
-    Customers.splice(index, 1)
+    Customers.splice(index, 1);
 }
 
 

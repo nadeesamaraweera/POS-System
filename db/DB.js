@@ -1,16 +1,15 @@
 export let Customers = [
     {
-        customerId : 'C01',
-        customerName : 'Nadeeesha',
-        customerAddress : 'Matara',
-        customerSalary : '30000.00'
-    },
+        custId : 'C01',
+        custName : 'Nadeesha',
+        custAddress : 'Matara',
+        custSalary : '25000'
+    } ,
 
     {
-        customerId : 'C02',
-        customerName : 'Nadeeesha',
-        customerAddress : 'Matara',
-        customerSalary : '30000.00'
+        custId : 'C02',
+        custName : 'Madushan',
+        custAddress : 'Matara',
+        custSalary : '30000'
     }
-
 ];

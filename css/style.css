@@ -34,15 +34,135 @@ header ul{
 
 header ul li{
     background-color: #ffff;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
     border: 1px solid #c4c4c4;
+}
+
+header ul li {
     color: #ff3737;
 }
 
-.carousel{
+section > div{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    font-size: 18px;
+    padding: 1vw;
+}
+
+section > :first-child > div{
+    margin-top: 12vh;
+}
+
+.topic{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 34px;
+}
+/* 
+#CustomerManage form div input , #CustomerManage select , #ItemManage form div input , #ItemManage select{
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+} */
+
+form div input ,select{
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.buttons{
+    flex-direction: row;
+    font-size: 18px !important;
+    gap: 0;
+}
+
+.buttons button{
+    padding: 19px 28px;
+    border: 1px solid #c4c4c4;
+    cursor: pointer;
+}
+
+.buttons > :first-child{
+    background-color: #56ABF6;
+}
+
+.buttons > :nth-child(2){
+    background-color: #DB3843;
+}
+
+.buttons > :nth-child(3){
+    background-color: #FEBF04;
+}
+
+.buttons > :nth-child(4){
+    background-color: #24A746;
+}
+
+.buttons > :last-child{
+    background-color: #D43A40;
+}
+
+#CustomerManage table , #ItemManage table{
+    margin-left: 50px;
+}
+
+#CustomerManage th , #CustomerManage td {
+    border: 1px solid #c4c4c4;
+    width: 20vw;
+    height: 4vw;
+    text-align: center;
+}
+
+#CustomerManage th{
+    background-color: #DB3843;
+    color: white;
+}
+
+
+.tableRow{
+   height: auto;
+}
+
+.table > div {
+    display: flex;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5.7vw;
+}
+
+.table > div > div {
+    width: 18vw;
+    height: 4vw;
+    border: 1px solid #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h5{
+    font-size: 15px;
+    color: #ff4343;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 8.8vh;
+}  
+
+
+.carousel {
     position: relative;
     width: 100%;
     height: 100%;
@@ -55,10 +175,10 @@ header ul li{
     transition: transform 0.5s ease;
 }
 
-.carousel-item active{
+.carousel-item {
     min-width: 100%;
     box-sizing: border-box;
-    height: 90%;
+    height: 100%;
 }
 
 .carousel-item img {
@@ -84,7 +204,13 @@ header ul li{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.carousel-control.prev {
+    left: 10px;
+}
 
+.carousel-control.next {
+    right: 10px;
+}
 
 #homePage > div{
     margin: 0;
@@ -95,107 +221,4 @@ header ul li{
     overflow: hidden;
     padding: 0;
 }
-
-section > div{
-    display: grid;
-    grid-template-columns: 35% 65%;
-    font-size: 18px;
-    padding: 1vw;
-}
-
-section > :first-child > div{
-    margin-top: 12vh;
-}
-
-.topic{
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-form div{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 34px;
-}
-
-form div input,select{
-    padding: 10px;
-    border: 1px solid #bababa;
-    border-radius: 10px;
-}
-
-.button{
-    flex-direction: row;
-    font-size: 18px !important;
-    gap: 0;
-}
-
-.button button{
-    padding: 19px 28px;
-    border: 1px solid #bababa;
-    cursor: pointer;
-
-}
-
-.button > :first-child {
-    background-color: #56ABF7;
-}
-
-.button > :nth-child(2){
-    background-color:#f62a2a;
-}
-
-.button > :nth-child(3){
-    background-color:#d2e410;
-}
-
-.button > :nth-child(4){
-    background-color:#1ab409;
-}
-
-.button > :last-child{
-    background-color: #ff3737;
-
-}
-
-#CustomerManage table{
-    margin-left: 50px;
-}
-
-#CustomerManage th, #CustomerManage td{
-    border: 1px solid #bababa;
-    width: 20vw;
-    height: 4vw;
-    text-align: center;
-}
-
-#CustomerManage th {
-    background-color:#f44f4f;
-    color: white;
-}
-
-.tableRow{
-    height: auto;
-}
-
-.table > div {
-    display: flex;
-}
-
-.table > div > div {
-    width: 18vw;
-    height: 4vw;
-    border: 1px solid #bababa;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-
-
-
-
-
-
-
 
