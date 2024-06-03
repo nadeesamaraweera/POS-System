@@ -74,9 +74,10 @@
             </div>
             <div>
               <label for="">Customer Salary</label>
-              <input type="text" class="customerSalary">
+              <input type="number" class="customerSalary">
               <h5 class="invalidCustomerSalary"></h5>
             </div>
+            
             <div class="button">
               <button type="submit" class="save">Save Customer</button>
               <button class="remove">Remove</button>
@@ -97,14 +98,20 @@
                 <th>Customer Salary</th>
               </tr>
             </thead>
+            <tbody class="tablerow"></tbody>
           </table>
         </div>
-
+      </div>
     </section>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="moduel" src="Controller/CustomerController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

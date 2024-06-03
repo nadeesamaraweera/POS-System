@@ -107,7 +107,7 @@ section > :first-child > div{
     margin-top: 12vh;
 }
 
-.title{
+.topic{
     font-size: 2rem;
     font-weight: 500;
 }
@@ -159,7 +159,11 @@ form div input,select{
 
 }
 
-#CustomerManage th, #CustomerMange td{
+#CustomerManage table{
+    margin-left: 50px;
+}
+
+#CustomerManage th, #CustomerManage td{
     border: 1px solid #bababa;
     width: 20vw;
     height: 4vw;
