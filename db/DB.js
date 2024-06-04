@@ -28,3 +28,5 @@ export let Items = [
         itemPrice : 200
     }
 ];
+
+export let Orders = [];
