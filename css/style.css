@@ -24,6 +24,7 @@ header .navbar{
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header ul{
@@ -34,15 +35,17 @@ header ul{
 
 header ul li{
     background-color: #ffff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
     border: 1px solid #c4c4c4;
+    
 }
 
 header ul li a{
     color: #ff3737;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 section > div{
@@ -228,19 +231,17 @@ h5{
 .carousel-control {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-10%);
+    background-color:transparent;
     border: none;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px;
     cursor: pointer;
     z-index: 1000;
 }
 
-.carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 .carousel-control.prev {
     left: 10px;
