@@ -149,7 +149,7 @@ function refresh(){
     reloadTable();
 }
 
-$('#CustomerManage .cleatBtn').click(function(){
+$('#CustomerManage .clearBtn').click(function(){
     refresh();
 });
 

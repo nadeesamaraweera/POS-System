@@ -34,7 +34,7 @@ header ul{
 
 header ul li{
     background-color: #ffff;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
@@ -66,7 +66,10 @@ form div{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: 34px;
+    margin-top: 28px;
+    font-size: 16px;
+    
+  
 }
 
 
@@ -78,34 +81,63 @@ form div input ,select{
 
 .buttons{
     flex-direction: row;
-    font-size: 18px !important;
-    gap: 0;
+    gap:0;
+    
 }
 
 .buttons button{
-    padding: 19px 28px;
+    padding: 12px 18px;
     border: 1px solid #c4c4c4;
     cursor: pointer;
+    font-size: 14px;
+    margin-top: 16px;
+
 }
 
 .buttons > :first-child{
     background-color: #56ABF6;
 }
 
+.buttons > :first-child:hover{
+    background-color: #0c49a5;
+    color: white;
+}
+
 .buttons > :nth-child(2){
     background-color: #DB3843;
+}
+
+.buttons > :nth-child(2):hover{
+    background-color: #be0c17;
+    color: white;
 }
 
 .buttons > :nth-child(3){
     background-color: #FEBF04;
 }
 
+.buttons > :nth-child(3):hover{
+    background-color: #c7b409;
+    color: white;
+}
+
+
 .buttons > :nth-child(4){
     background-color: #24A746;
 }
 
+.buttons > :nth-child(4):hover{
+    background-color:green;
+    color: white;
+}
+
 .buttons > :last-child{
     background-color: #D43A40;
+}
+
+.buttons > :last-child:hover{
+    background-color:#be0c17;
+    color: white;
 }
 
 #CustomerManage table , #ItemManage table{
@@ -163,7 +195,8 @@ h5{
     color: #ff4343;
     font-weight: 400;
     position: absolute;
-    margin-top: 9.4vh;
+    margin-top: 10vh;
+    font-family:'Times New Roman', Times, serif;
 }
 
 
