@@ -3,17 +3,16 @@ export let Customers = [
         custId : 'C001',
         custName : 'Nadeesha',
         custAddress : 'Matara',
-        custSalary : '25000'
+        custSalary : '25'
     } ,
 
     {
         custId : 'C002',
         custName : 'Madushan',
         custAddress : 'Matara',
-        custSalary : '30000'
+        custSalary : '30'
     }
 ];
-
 export let Items = [
     {
         itemId : 'I001',
@@ -28,5 +27,4 @@ export let Items = [
         itemPrice : 200
     }
 ];
-
 export let Orders = [];
