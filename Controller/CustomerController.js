@@ -115,7 +115,7 @@ function loadTable(customer){
 }
 
 function extractNumber(id) {
-    var match = id.match(/C0(\d+)/);
+    var match = id.match(/C00(\d+)/);
     if (match && match.length > 1) {
         return parseInt(match[1]);
     }
@@ -129,7 +129,7 @@ function createCustomerId() {
         return 'C001';
     } else {
         let lastCustomer = customers[customers.length - 1];
-        let id = lastCustomer && lastCustomer.custId ? lastCustomer.custId : 'C00';
+        let id = lastCustomer && lastCustomer.custId ? lastCustomer.custId : 'C000';
         
         let number = extractNumber(id);
         number++;
@@ -145,11 +145,11 @@ function refresh(){
     $('#CustomerManage .invalidCustId').text('');
     $('#CustomerManage .invalidCustName').text('');
     $('#CustomerManage .invalidCustAddress').text('');
-
+    $('.counts .customers h2').text(getAllCustomers().length);
     reloadTable();
 }
 
-$('#CustomerManage .clearBtn').click(function(){
+$('#CustomerManage .cleatBtn').click(function(){
     refresh();
 });
 
@@ -174,7 +174,7 @@ function searchCustomer(id){
 $('#CustomerManage .updateBtn').click(function(){
     
     let UpdateCustomer = {
-        custId : 'C000',
+        custId : 'C00',
         custName : $('#CustomerManage .custName').val(),
         custAddress : $('#CustomerManage .custAddress').val(),
         custSalary : $('#CustomerManage .custSalary').val()
