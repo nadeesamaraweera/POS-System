@@ -11,7 +11,9 @@ $(document).ready(function () {
     refresh();
 });
 
-$('.orderManageBtn').click(function(){
+
+
+$('.OrderManageBtn').click(function(){
     refresh();
 });
 
@@ -23,7 +25,7 @@ function refresh(){
     $('#OrderManage .Total').text("");
     // $('#OrderManage .SubTotal').text("");
     // $('#OrderManage .SubTotal').text("");
-    $('#OrderManage .Balance').val("");
+    // $('#OrderManage .Balance').val("");
     $('#OrderManage .Cash').val('');
     $('#OrderManage .Discount').val('');
 
@@ -212,8 +214,11 @@ $('#OrderManage .placeOrder').click(function(){
 
     // alert(cash + ' ' + total + ' ' + discount);
 
+
+    
     if(cash >= total){
         if(discount >= 0 && discount <= 100){
+             
             let subTotal = total - (total * discount / 100);
             $('#OrderManage .SubTotal').text(subTotal.toFixed(2));
             let balance = cash - subTotal;
@@ -245,6 +250,10 @@ $('#OrderManage .placeOrder').click(function(){
         alert('Not Enough Cash');
     }
 });
+
+
+
+
 
 
 function updateItemData(){
