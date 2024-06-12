@@ -102,7 +102,7 @@ function validate(item){
 }
 
 function extractNumber(id){
-    var match = id.match(/I0(\d+)/);
+    var match = id.match(/I00(\d+)/);
     if(match && match.length > 1){
         return match[1];
     }
@@ -116,6 +116,7 @@ function refresh(){
     $('#ItemManage .itemQty').val('');
     $('#ItemManage .itemPrice').val('');
     loadTable();
+    $('.counts .items h2').text(getAllItems().length);
 }
 
 function generateId(){
