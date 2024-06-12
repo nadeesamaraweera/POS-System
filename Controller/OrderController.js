@@ -21,11 +21,13 @@ function refresh(){
     loadCustomer();
     loadItems();
     $('#OrderManage .Total').text("");
-    $('#OrderManage .SubTotal').text("");
-    $('#OrderManage .SubTotal').text("");
+    // $('#OrderManage .SubTotal').text("");
+    // $('#OrderManage .SubTotal').text("");
     $('#OrderManage .Balance').val("");
     $('#OrderManage .Cash').val('');
     $('#OrderManage .Discount').val('');
+
+    $('.counts .orders h2').text(getAllOrders().length);
 }
 
 function extractNumber(id){
@@ -99,7 +101,7 @@ $('#OrderManage .items').change(function(){
     itemId = item.itemId;
     // alert(item.itemQty);
     itemQty = item.itemQty;
-    $('#OrderManage .addBtn').text('Add');
+    $('#OrderManage .addbtn').text('Add');
     $('#OrderManage .itemCode').val(item.itemId);
     $('#OrderManage .itemName').val(item.itemName);
     $('#OrderManage .itemQty').val(item.itemQty);
@@ -119,7 +121,7 @@ function clear(tableCount){
         $('#OrderManage .Cash').val('');
         $('#OrderManage .Total').text('');
         $('#OrderManage .Discount').val('');
-        $('#OrderManage .itemCmb').val('');
+        $('#OrderManage .items').val('');
 
     }
     else{
@@ -137,7 +139,7 @@ function clear(tableCount){
 
 $('#OrderManage .addbtn').click(function(){
 
-    if($('#OrderManage .addBtn').text() === 'delete'){
+    if($('#OrderManage .addbtn').text() === 'delete'){
         dropItem();
     }
 
@@ -255,7 +257,7 @@ function updateItemData(){
     }
 }
 
-$('.MainTable .tableRows').on('click', 'div', function(){
+$('.Maintable .tableRows').on('click', 'div', function(){
     let itemCode = $(this).children('div:eq(0)').text();
     let itemName = $(this).children('div:eq(1)').text();
     let price = $(this).children('div:eq(2)').text();
@@ -266,7 +268,8 @@ $('.MainTable .tableRows').on('click', 'div', function(){
     $('#OrderManage .itemPrice').val(price);
     $('#OrderManage .orderQty').val(qty);
 
-    $('#OrderManage .ItemSelect .addBtn').text('delete');
+    $('#OrderManage .ItemSelect .addbtn').text('delete');
+    $('#OrderManage .ItemSelect .addbtn').css('background-color', 'red');
 });
 
 function dropItem(){

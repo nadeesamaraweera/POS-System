@@ -17,7 +17,7 @@ export let Customers = [
 export let Items = [
     {
         itemId : 'I001',
-        itemName : 'Soap',
+        itemName : 'Biscuits',
         itemQty : 10,
         itemPrice : 100
     },
