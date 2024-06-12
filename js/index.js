@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $('#homepage').show();
 
     $('.nav-link').click(function(event){
