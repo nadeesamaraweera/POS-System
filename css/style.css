@@ -440,3 +440,241 @@ table{
 
 
 /* responsive */
+
+/* Mobile styles */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .navbar {
+        font-size: 1.2rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    section > div {
+        grid-template-columns: 100%;
+    }
+
+    section > :first-child > div {
+        margin-top: 5vh;
+    }
+
+    .invoiceDetails {
+        padding: 5px;
+    }
+
+    #OrderManage > div {
+        flex-direction: column;
+    }
+
+    #OrderManage h1 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 100%;
+    }
+
+    .TotalCalculate {
+        padding: 10px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 20px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .carousel-control {
+        font-size: 1rem;
+    }
+
+    .counts > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .counts > div > div {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 1.5rem;
+    }
+
+    .counts img {
+        width: 60%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 992px) {
+    header {
+        padding: 15px;
+    }
+
+    header .navbar {
+        font-size: 1.3rem;
+    }
+
+    header ul {
+        flex-direction: row;
+    }
+
+    section > div {
+        grid-template-columns: 50% 50%;
+    }
+
+    section > :first-child > div {
+        margin-top: 8vh;
+    }
+
+    .invoiceDetails {
+        padding: 10px;
+    }
+
+    #OrderManage > div {
+        flex-direction: row;
+    }
+
+    #OrderManage h1 {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 50% 50%;
+    }
+
+    .TotalCalculate {
+        padding: 15px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 30px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .carousel-control {
+        font-size: 1.2rem;
+    }
+
+    .counts > div {
+        gap: 30px;
+    }
+
+    .counts > div > div {
+        width: 50%;
+        height: auto;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 2rem;
+    }
+
+    .counts img {
+        width: 50%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 993px) {
+    header {
+        padding: 20px;
+    }
+
+    header .navbar {
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        flex-direction: row;
+    }
+
+    section > div {
+        grid-template-columns: 35% 65%;
+    }
+
+    section > :first-child > div {
+        margin-top: 12vh;
+    }
+
+    .invoiceDetails {
+        padding: 8px 8px;
+    }
+
+    #OrderManage > div {
+        flex-direction: row;
+    }
+
+    #OrderManage h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    #OrderManage .TotalCalculate form > :first-child {
+        grid-template-columns: 50% 50%;
+    }
+
+    .TotalCalculate {
+        padding: 20px;
+    }
+
+    .TotalCalculate button {
+        margin-top: 40px;
+    }
+
+    .table > div > div, .tableRows > div > div {
+        width: 20vw;
+        font-size: 14px;
+    }
+
+    .carousel-control {
+        font-size: 1.5rem;
+    }
+
+    .counts > div {
+        gap: 50px;
+    }
+
+    .counts > div > div {
+        width: 20%;
+        height: 50%;
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+    .counts h1, .counts h2 {
+        font-size: 2.5rem;
+    }
+
+    .counts img {
+        width: 40%;
+    }
+}
