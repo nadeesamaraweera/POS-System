@@ -174,7 +174,7 @@ function searchCustomer(id){
 $('#CustomerManage .updateBtn').click(function(){
     
     let UpdateCustomer = {
-        custId : 'C00',
+        custId : 'C000',
         custName : $('#CustomerManage .custName').val(),
         custAddress : $('#CustomerManage .custAddress').val(),
         custSalary : $('#CustomerManage .custSalary').val()
